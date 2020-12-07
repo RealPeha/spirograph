@@ -24,3 +24,117 @@ canvas {
 #global-var {
     width: 30%;
 }
+
+.caution-old-project {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    font-size: 18px;
+    font-family: monospace;
+    background-color: tomato;
+    color: #fff;
+    transition: top .15s;
+    display: none;
+}
+
+.caution-old-project .close {
+    position: absolute;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.caution-old-project .close::after, .caution-old-project .close::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+}
+
+.caution-old-project .close::after {
+    transform: rotate(45deg);
+}
+
+.caution-old-project .close::before {
+    transform: rotate(-45deg);
+}
+
+.github {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: -130px;
+    right: 0;
+    height: 40px;
+    background-color: #24292e;
+    width: 130px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-radius: 0 10px 0 0;
+    text-decoration: none;
+    transition: left .3s, width .2s;
+}
+
+.github:hover {
+    width: 140px;
+}
+
+.github:hover .arrow {
+    opacity: 1;
+    left: 15px;
+}
+
+
+.github span {
+    color: #fff;
+    margin: auto 10px;
+}
+
+.github svg {
+    margin: auto 0;
+}
+
+.github svg path {
+    fill: #fff;
+}
+
+.github .arrow {
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity .3s, left .2s;
+}
+
+.github .arrow::after, .github .arrow::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+}
+
+.github .arrow::after {
+    transform: rotate(45deg);
+    top: 4px;
+}
+
+.github .arrow::before {
+    transform: rotate(-45deg);
+    bottom: 4px;
+}

@@ -151,3 +151,23 @@ const parse = input => {
     output = output.replace(/\sr/g, 'this.r')
     return output
 }
+
+const caution = document.getElementById('caution')
+const hideCaution = localStorage.getItem('hideCaution')
+
+if (!hideCaution) {
+    caution.style.display = 'block'
+    
+    document.getElementById('close').addEventListener('click', () => {
+        caution.style.top = '-35px'
+        localStorage.setItem('hideCaution', true)
+
+        setTimeout(() => caution.remove(), 150)
+    })
+} else {
+    caution.remove()
+}
+
+setTimeout(() => {
+    document.getElementById('github').style.left = '0'
+}, 1000)
